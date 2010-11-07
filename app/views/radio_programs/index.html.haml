@@ -1,0 +1,23 @@
+%p= link_to "Utwórz", new_radio_program_path
+
+- @radio_programs.each do |radio_program|
+  %p
+    = radio_program.name
+  %p
+    = radio_program.announcement
+  %p
+    = radio_program.playlist
+  %p
+    = radio_program.user.email
+
+
+= will_paginate @radio_programs    
+%hr
+
+- form_for :search, @search, :html => {:method => :get} do |f|
+  %p
+    = f.label :playlist_contains
+    = f.text_field :playlist_contains
+    =# f.label :comments_created_at_greater_than, 'With comments after'
+    =# f.datetime_select :comments_created_at_greater_than, :include_blank => true %><br />
+    = f.submit 

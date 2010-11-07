@@ -1,0 +1,12 @@
+%p= link_to "Utwórz", new_radio_program_path
+
+- @radio_programs.each do |radio_program|
+  %p
+    = radio_program.name
+  %p
+    = radio_program.announcement
+  %p
+    = radio_program.playlist
+  %p
+    = radio_program.user.email
+

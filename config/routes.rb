@@ -1,7 +1,8 @@
 Task5::Application.routes.draw do
   
   devise_for :users
-  root :to => "radio_program#index"
+  root :to => "radio_programs#index"
+  resources :radio_programs
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
