@@ -1,9 +1,5 @@
 - form_for @radio_program do |f|
   %p
-    = f.class
-    - f.methods.sort.each do |x|
-      = x + '\n'
-    %br
     Nazwa
     %br
     = f.text_field :name
