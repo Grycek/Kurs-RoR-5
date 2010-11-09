@@ -5,7 +5,15 @@ gem 'haml'
 gem 'devise'
 gem 'meta_search'
 gem "will_paginate", "~> 3.0.pre2"
-gem 'rspec'
+
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.0.1"
+end
+
+gem "autotest"
+gem "webrat"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
